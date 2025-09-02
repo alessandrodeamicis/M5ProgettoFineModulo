@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1066977423266173461}
   - component: {fileID: -9109688974972247688}
   - component: {fileID: 5486808042741058836}
+  - component: {fileID: 369584013471449035}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -90,7 +91,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -133,13 +134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isSentry: 0
-  patrolPoints:
+  _patrolPoints:
   - {fileID: 0}
   - {fileID: 0}
-  waitTimeAtPoint: 2
-  rotationSpeed: 120
-  timeBetweenRotations: 3
-  sentryAngles: []
 --- !u!136 &-9109688974972247688
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -184,6 +181,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &369584013471449035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5492471560011315542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc91b98b40422c4295e0446897f4275, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 3437994121223531693, guid: c8892c148600fe9478c46f598a91cc79, type: 3}
+  _attackRange: 1
+  _playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  _gameOverCanvas: {fileID: 0}
 --- !u!1001 &3529595418105765768
 PrefabInstance:
   m_ObjectHideFlags: 0

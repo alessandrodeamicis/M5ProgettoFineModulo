@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyVision : MonoBehaviour
@@ -8,9 +5,10 @@ public class EnemyVision : MonoBehaviour
     [SerializeField] private float _viewDistance = 10f;
     [SerializeField] private float _viewAngle = 45f;
     [SerializeField] private LayerMask _obstaclesLayer;
+
     public Transform target;
 
-    public bool CanSeeTarget()
+    public bool CanSeePlayer()
     {
         if (target == null) return false;
 
